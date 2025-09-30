@@ -1,0 +1,19 @@
+from flask import Flask, request, jsonify
+from math_operations import add, sub
+
+app = Flask(__name__)
+
+@app.route("/add")
+def add_numbers():
+    a = int(request.args.get("a", 0))
+    b = int(request.args.get("b", 0))
+    return jsonify({"result": add(a, b)})
+
+@app.route("/sub")
+def sub_numbers():
+    a = int(request.args.get("a", 0))
+    b = int(request.args.get("b", 0))
+    return jsonify({"result": sub(a, b)})
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
