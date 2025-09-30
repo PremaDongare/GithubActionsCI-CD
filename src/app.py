@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from math_operations import add, sub
+from src.math_operations import add, sub
 
 app = Flask(__name__)
 
