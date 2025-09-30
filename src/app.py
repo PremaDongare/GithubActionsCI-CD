@@ -20,7 +20,7 @@ def calculate():
     elif op == "sub":
         result = sub(a, b)
     elif op == "mul":  # handle multiplication
-        result = mul(a, b)
+        result =mul(a, b)
     else:
         return jsonify({"error": "Invalid operation. Use 'add', 'sub', or 'mul'."}), 400
 
